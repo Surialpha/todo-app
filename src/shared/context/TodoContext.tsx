@@ -54,9 +54,9 @@ function TodoProvider(props: PropModel) {
     saveTodos(newToDos);
   };
 
-  useEffect(() => {
-    console.log("Use Effect :>> ");
-  }, [todos]);
+  // useEffect(() => {
+  //   console.log("Use Effect :>> ");
+  // }, [todos]);
 
   return (
     <todoContext.Provider

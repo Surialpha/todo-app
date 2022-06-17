@@ -1,0 +1,15 @@
+.backgroundSVG {
+  &--up {
+    position: absolute;
+    top: 0%;
+    width: 100vw;
+    z-index: 0;
+  }
+  &--down {
+    bottom: 0%;
+    position: absolute;
+    transform: rotateY(360deg);
+    width: 100vw;
+    z-index: 0;
+  }
+}

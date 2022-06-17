@@ -1,0 +1,54 @@
+.create-button {
+  animation: shake 10s ease-in-out 10s infinite;
+  background-color: #ccd5ae;
+  border-radius: 100%;
+  border: solid 0.1rem #e9edc9;
+  bottom: 1rem;
+  box-shadow: -0.1rem -0.1rem 0.5rem #ffffff52, 0.1rem 0.1rem 0.5rem #2e2e2e52;
+  color: #fefae0;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.4rem 0.55rem;
+  position: fixed;
+  right: 1rem;
+  transition: 300ms ease-out;
+  &:hover {
+    animation: paused;
+    background-color: #e9edc9;
+    border: solid 0.3rem #ccd5ae;
+    box-shadow: 0.5rem 0.5rem 0.5rem #2e2e2e40;
+    color: #ccd5ae;
+    transform: scale(1.1);
+    transition: 300ms ease-in;
+    
+  }
+  &:active {
+    transition: 100ms;
+    transform: translateY(0.1rem);
+    box-shadow: 0.1rem 0.1rem 0.3rem #2e2e2e40;
+  }
+}
+
+@keyframes shake {
+  1%,
+  9% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  2%,
+  8% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  3%,
+  5%,
+  7% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  4%,
+  6% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

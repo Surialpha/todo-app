@@ -1,0 +1,55 @@
+li {
+  align-items: center;
+  background-color: #faedcd;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0.5rem 0;
+  box-shadow: 0.3rem 0.3rem 1rem #2e2e2e7c;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+
+  .check-task {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 15%;
+   
+  }
+
+  .task-text {
+    text-align: left;
+    width: 75%;
+  }
+  .close-task {
+    cursor: pointer;
+    margin-top: -3rem;
+    font-size: 1.2rem;
+    position: relative;
+    transition: 300ms ease-out;
+    width: 10%;
+    transform: translate(0.45rem, -0.1rem);
+    text-align: right;
+    &:hover {
+      color: #d4a373;
+      transform: scale(1.3);
+      transition: 300ms ease-in;
+    }
+    &:active {
+      transition: 0ms;
+      transform: scale(1.25);
+    }
+  }
+
+  .text-task-completed {
+    text-decoration: line-through;
+  }
+
+  .check-task-completed,
+  .text-task-completed {
+    color: #ccd5ae;
+  }
+}

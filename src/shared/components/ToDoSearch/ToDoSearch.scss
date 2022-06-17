@@ -1,0 +1,20 @@
+input {
+  background-color: #ccd5ae;
+  border-radius: 0.2rem;
+  border: 1px solid #faedcd;
+  color: #2e2e2e;
+  display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin: auto;
+  padding: 0.7rem 0rem;
+  text-align: center;
+  width: 80%;
+  &::placeholder {
+    color: #fefae0;
+  }
+  &:focus {
+    background-color: #e9edc9;
+    outline: 2px solid #ccd5ae;
+  }
+}

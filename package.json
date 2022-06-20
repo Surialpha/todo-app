@@ -50,5 +50,5 @@
     "@types/uuid": "^8.3.4",
     "gh-pages": "^4.0.0"
   },
-  "homepage": "https://surialpha.github.io/view-once-api"
+  "homepage": "https://surialpha.github.io/todo-app/"
 }

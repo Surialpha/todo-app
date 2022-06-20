@@ -1,9 +1,9 @@
-import { createContext, useEffect, useState } from "react";
-import { useLocalStorage } from "../hooks/UseLocalStorage";
+import { createContext, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { ToDoModel } from "../models/ToDoModel";
+import { useLocalStorage } from "../hooks/UseLocalStorage";
 import { AppInterface } from "../models/AppModel";
 import { PropModel } from "../models/PropChildrenModel";
+import { ToDoModel } from "../models/ToDoModel";
 
 const todoContext = createContext<AppInterface | undefined>(undefined);
 
@@ -20,6 +20,7 @@ function TodoProvider(props: PropModel) {
   const [todos, saveTodos] = useLocalStorage(TODOS_LOCAL_NAME, defaultToDoList);
 
   const [searchValue, setSearchValue] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const completedToDos = todos
     .filter((toDos: ToDoModel) => toDos.completed)
@@ -54,9 +55,14 @@ function TodoProvider(props: PropModel) {
     saveTodos(newToDos);
   };
 
-  // useEffect(() => {
-  //   console.log("Use Effect :>> ");
-  // }, [todos]);
+  const createTodo = (newTodo: string) => {
+    const newToDo: ToDoModel = {
+      completed: false,
+      key: uuidv4(),
+      text: newTodo,
+    };
+    saveTodos([...todos, newToDo]);
+  };
 
   return (
     <todoContext.Provider
@@ -69,6 +75,9 @@ function TodoProvider(props: PropModel) {
         searchedToDos,
         completeToDo,
         deleteToDo,
+        showModal,
+        setShowModal,
+        createTodo,
       }}
     >
       {props.children}

@@ -6,16 +6,14 @@ import { ToDoList } from "../../shared/components/ToDoList/ToDoList";
 import { ToDoSearch } from "../../shared/components/ToDoSearch/ToDoSearch";
 import { ToDoModel } from "../../shared/models/ToDoModel";
 import { useTodoContext } from "../../shared/hooks/UseTodoContext";
+import { TodoModal } from "../../shared/components/TodoModal/TodoModal";
+import { CreateTodoForm } from "../../shared/components/CreateTodoForm/CreateTodoForm";
 
 function ToDo() {
   const appState = useTodoContext();
 
   return (
     <div className="container">
-      {/* <ToDoCounter completedToDos={completedToDos} totalToDos={totalToDos} />
-
-      <ToDoSearch searchValue={searchValue} setSearchValue={setSearchValue} /> */}
-
       <ToDoCounter />
       <ToDoSearch />
 
@@ -32,7 +30,16 @@ function ToDo() {
             );
           })}
         </ToDoList>
-      )) || <p>There aren't any TODO here, create a new one!</p>}
+      )) || (
+        <p>
+          There aren't any TODO here
+          {appState.todos.length <= 0 && ", create a new one!"}
+        </p>
+      )}
+
+      <TodoModal>
+        <CreateTodoForm />
+      </TodoModal>
 
       <CreateTodoButton />
     </div>

@@ -1,0 +1,34 @@
+#modal-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.612);
+  color: #2e2e2e;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  .modal-body {
+    background-color: #fefae2;
+    position: relative;
+    padding: 1rem;
+    max-height: 30rem;
+    min-height: fit-content;
+    max-width: 400px;
+    width: 80%;
+    border-radius: 0.5rem;
+    .close-modal {
+      position: absolute;
+      cursor: pointer;
+      top: 0.2rem;
+      right: 0.5rem;
+      &:hover {
+        color: #d4a373;
+        transform: scale(1.3);
+      }
+    }
+  }
+}

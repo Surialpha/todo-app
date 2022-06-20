@@ -8,7 +8,6 @@ function ToDoSearch() {
     e: React.ChangeEvent<HTMLInputElement>
   ): void => {
     setSearchValue(e.target.value);
-    console.log("searchValue", searchValue);
   };
 
   return (

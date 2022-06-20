@@ -11,36 +11,33 @@ li {
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
   user-select: none;
+  overflow-wrap: break-word;
 
   .check-task {
     text-align: center;
     cursor: pointer;
     font-size: 1.5rem;
     width: 15%;
-   
   }
 
   .task-text {
     text-align: left;
-    width: 75%;
+    padding-right: 1rem;
+    width: 83%;
   }
   .close-task {
     cursor: pointer;
-    margin-top: -3rem;
     font-size: 1.2rem;
-    position: relative;
+    display: flex;
     transition: 300ms ease-out;
-    width: 10%;
-    transform: translate(0.45rem, -0.1rem);
-    text-align: right;
+    width: 2%;
+    transform: translate(0.5rem, -0.8rem);
+    justify-content: flex-end;
+    align-self: stretch;
     &:hover {
       color: #d4a373;
-      transform: scale(1.3);
+      font-size: 1.4rem;
       transition: 300ms ease-in;
-    }
-    &:active {
-      transition: 0ms;
-      transform: scale(1.25);
     }
   }
 

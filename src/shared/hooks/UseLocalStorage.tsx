@@ -19,10 +19,10 @@ function useLocalStorage(LOCAL_STORAGE_NAME: string, defaultValue?: any): any {
     }
 
     setItemValue(parsedItem);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const updateLocalStorage = (newItem: string) => {
+  const updateLocalStorage = (newItem: any) => {
     const stringifiedItem = JSON.stringify(newItem);
     localStorage.setItem(LOCAL_STORAGE_NAME, stringifiedItem);
     setItemValue(newItem);

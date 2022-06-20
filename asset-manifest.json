@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/view-once-api/static/css/main.b7318720.css",
+    "main.js": "/view-once-api/static/js/main.b1d81277.js",
+    "index.html": "/view-once-api/index.html",
+    "static/media/bottom-wave.svg": "/view-once-api/static/media/bottom-wave.82127b6620254c316224.svg",
+    "static/media/top-wave.svg": "/view-once-api/static/media/top-wave.c0c219c2c8009c6077cc.svg",
+    "main.b7318720.css.map": "/view-once-api/static/css/main.b7318720.css.map",
+    "main.b1d81277.js.map": "/view-once-api/static/js/main.b1d81277.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7318720.css",
+    "static/js/main.b1d81277.js"
+  ]
+}

@@ -17,9 +17,7 @@ function CreateTodoForm() {
   };
 
   const validateValue = (e: React.ChangeEvent<HTMLTextAreaElement> | any) => {
-    console.log("e :>> ", e.nativeEvent.inputType);
     const value = e.target.value;
-
     if (e.nativeEvent.inputType === "insertLineBreak" && value.length >= 3) {
       saveTodo(e);
     } else if (!/\s{2,}/g.test(value)) {

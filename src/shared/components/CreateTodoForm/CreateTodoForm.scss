@@ -26,23 +26,52 @@
         padding: 0.5rem;
       }
       .create {
-        &:hover{
-            background-color: #ccd5ae;
-            border-color: #828870;
+        &:hover {
+          background-color: #ccd5ae;
+          border-color: #828870;
         }
-        &:disabled{
-            background-color: #828870;
-            border: initial;
-            color: #ccd5ae87 ;
-            cursor: no-drop;
+        &:disabled {
+          background-color: #828870;
+          border: initial;
+          color: #ccd5ae87;
+          cursor: no-drop;
         }
       }
       .close {
         background-color: #c5bba3;
-        &:hover{
-            background-color: #f9ecce;
-            color: #aca38e;
-            border-color: #aca38e;
+        &:hover {
+          background-color: #f9ecce;
+          color: #aca38e;
+          border-color: #aca38e;
+        }
+      }
+
+      /* Dark mode */
+      @media (prefers-color-scheme: dark) {
+        button {
+          background-color: #595a67;
+          border: solid 0.2rem #2e2e35;
+          color: #eaeaec;
+          box-shadow: none;
+        }
+        .create {
+          &:hover {
+            background-color: #eaeaec;
+            border-color: #2e2e35;
+            color: #2e2e35;
+          }
+          &:disabled {
+            background-color: #8f8e99;
+            color: #595a67;
+          }
+        }
+        .close {
+          background-color: #0a0a0b;
+          &:hover {
+            background-color: #2e2e35;
+            color: #8f8e99;
+            border-color: #8f8e99;
+          }
         }
       }
     }
@@ -76,12 +105,29 @@
       background-color: #e9edc9;
       outline: 2px solid #ccd5ae;
     }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+      background-color: #8f8e99;
+      border-color: #2e2e35;
+      color: #eaeaec;
+      &::placeholder {
+        color: #595a67;
+      }
+      &:focus {
+        background-color: #595a67;
+        outline-color: #8f8e99;
+        &::placeholder {
+          color: #8f8e99;
+        }
+      }
+    }
   }
 
-  .character-count{
+  .character-count {
     position: absolute;
     bottom: 2%;
-    font-size: .8rem;
+    font-size: 0.8rem;
     right: 8px;
   }
 }

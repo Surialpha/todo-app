@@ -23,10 +23,19 @@
     transition: 300ms ease-in;
     
   }
-  &:active {
-    transition: 100ms;
-    transform: translateY(0.1rem);
-    box-shadow: 0.1rem 0.1rem 0.3rem #2e2e2e40;
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: #2e2e35;
+    border:solid .2rem #595a67;
+    color: #595a67;
+    box-shadow: none;
+    &:hover {
+      background-color: #595a67;
+      border:solid .2rem #8f8e99;
+      box-shadow: none;
+      color: #eaeaec;
+      
+    }
   }
 }
 

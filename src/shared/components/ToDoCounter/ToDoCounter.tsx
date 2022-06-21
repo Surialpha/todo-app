@@ -5,7 +5,7 @@ function ToDoCounter() {
   const { totalToDos, completedToDos } = useTodoContext();
 
   return (
-    <section>
+    <section className="todo-counter">
       <h1>
         TODO LIST <i className="material-icons">format_list_bulleted</i>
       </h1>

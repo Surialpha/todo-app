@@ -49,4 +49,18 @@ li {
   .text-task-completed {
     color: #ccd5ae;
   }
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: #2e2e35;
+    .close-task {
+      &:hover {
+        color: #8f8e99;
+      }
+    }
+    .check-task-completed,
+    .text-task-completed {
+      color: #595a67;
+    }
+  }
 }

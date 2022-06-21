@@ -1,3 +1,5 @@
+@import '../../../App.scss';
+
 input {
   background-color: #ccd5ae;
   border-radius: 0.2rem;
@@ -16,5 +18,18 @@ input {
   &:focus {
     background-color: #e9edc9;
     outline: 2px solid #ccd5ae;
+  }
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: #2e2e35;
+    border-color: #2e2e35;
+    color: #eaeaec;
+    &::placeholder {
+      color: #595a67;
+    }
+    &:focus {
+      background-color: #8f8e99;
+      outline-color: #8f8e99;
+    }
   }
 }

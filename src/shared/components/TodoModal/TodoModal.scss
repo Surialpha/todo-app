@@ -31,4 +31,17 @@
       }
     }
   }
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(0, 0, 0, 0.834);
+    color: #eaeaec;
+    .modal-body {
+      background-color: #2e2e35;
+      .close-modal {
+        &:hover {
+          color: #8f8e99;
+        }
+      }
+    }
+  }
 }

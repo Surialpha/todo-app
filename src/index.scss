@@ -47,3 +47,22 @@ body {
     }
   }
 }
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0a0b;
+    color: #f4f4f5;
+    &:before {
+      background-image: url("../public/top-wave-dark.svg");
+      @media screen and (min-width: 720px) {
+        background-color: #252422;
+      }
+    }
+    &:after {
+      background-image: url("../public/bottom-wave-dark.svg");
+    }
+
+    
+  }
+}

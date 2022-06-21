@@ -16,13 +16,17 @@ function CreateTodoForm() {
     }
   };
 
-  const validateValue = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const validateValue = (e: React.ChangeEvent<HTMLTextAreaElement> | any) => {
     const value = e.target.value;
-    setNewTodo(e.target.value);
-    if (value.length >= 3 && value.length < 250) {
-      setIsValid(true);
-    } else {
-      setIsValid(false);
+    if (!/\s{2,}/g.test(value)) {
+      setNewTodo(value.trimStart());
+      if (value.length >= 3 && value.length < 250) {
+        setIsValid(true);
+      } else {
+        setIsValid(false);
+      }
+    } else if (e.nativeEvent.inputType === "deleteContentBackward") {
+      setNewTodo(value);
     }
   };
 

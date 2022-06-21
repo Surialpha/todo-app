@@ -5,9 +5,14 @@ function ToDoSearch() {
   const { searchValue, setSearchValue } = useTodoContext();
 
   const onSearchValueChange = (
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement> | any
   ): void => {
-    setSearchValue(e.target.value);
+    const value = e.target.value;
+    if (!/\s{2,}/g.test(value)) {
+      setSearchValue(value.trimStart());
+    } else if (e.nativeEvent.inputType === "deleteContentBackward") {
+      setSearchValue(value);
+    }
   };
 
   return (
